@@ -5,3 +5,6 @@ class @Glue
     After(@serverSideAdapter, "jsonSiteLoaded", (singleSite) => @site.setSite(singleSite))
 
     After(@site, "setSite", (singleSite) => @gui.showSite(singleSite))
+    After(@gui, "showSiteClicked", (id) => @serverSideAdapter.loadSite(id))
+
+    After(@serverSideAdapter, "jsonSiteNotLoaded", (xhr, ajaxOptions, thrownError)=> @gui.showError(xhr, ajaxOptions, thrownError))

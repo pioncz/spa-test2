@@ -16,4 +16,6 @@
 //= require ../../../vendor/assets/javascripts/YouAreDaBomb
 //= require ../../../vendor/assets/javascripts/utils
 //= require_tree ../../../vendor/assets/javascripts/
-new App()
+$(function() {
+	new App();
+});

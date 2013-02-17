@@ -12,6 +12,3 @@ class @Site
 
 class @SingleSite
   constructor: (@id, @name, @content) ->
-    @cid = null
-
-  setCid: (@cid) =>
