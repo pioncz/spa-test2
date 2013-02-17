@@ -23,5 +23,6 @@ class @Gui
   showSiteClicked: (id)=>
 
   showError: (xhr, ajaxOptions, thrownError)=>
+    $(".error-box").empty()
     $(".error-box").append("Error (" + xhr.status + "): " + thrownError)
     $(".error-box").css("display","block")
